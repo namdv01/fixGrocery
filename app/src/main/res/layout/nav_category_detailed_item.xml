@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="6dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:background="@drawable/border"
+            android:src="@drawable/fruits"
+            android:id="@+id/nav_category_img"
+            android:scaleType="centerInside"
+            android:layout_width="120dp"
+            android:layout_height="150dp"/>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Tên sản phẩm"
+                android:id="@+id/nav_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Giá tiền:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/nav_category_price"
+                    android:layout_marginLeft="8dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/add_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/add_circle" />
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="1"
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:src="@drawable/remove_circle"
+                    android:id="@+id/remove_img"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_gravity="end"
+                android:id="@+id/buynow"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ff00"
+                android:text="Mua ngay"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

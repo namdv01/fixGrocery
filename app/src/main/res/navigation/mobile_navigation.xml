@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.authenfirebase.ui.home.HomeFragment"
+        android:label="Trang chủ"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.authenfirebase.ui.profile.ProfileFragment"
+        android:label="Trang cá nhân"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="com.example.authenfirebase.ui.category.CategoryFragment"
+        android:label="Thể loại"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/nav_my_carts"
+        android:name="com.example.authenfirebase.myCartsFragment"
+        android:label="Giỏ hàng của tôi"
+        tools:layout="@layout/fragment_my_carts" />
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.example.authenfirebase.myOrdersFragment"
+        android:label="Đơn hàng của tôi"
+        tools:layout="@layout/fragment_my_orders" />
+</navigation>

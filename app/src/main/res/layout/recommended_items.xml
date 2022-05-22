@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/recommended_img"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/offers3"/>
+
+        <TextView
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="product name"
+            android:id="@+id/recommended_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:text="Miểu tả"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:id="@+id/recommended_desc"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ratingbar"
+                android:layout_width="35dp"
+                android:layout_height="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:id="@+id/recommended_rating"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
