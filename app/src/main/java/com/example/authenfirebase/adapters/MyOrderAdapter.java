@@ -1,6 +1,7 @@
 package com.example.authenfirebase.adapters;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.my_order_item,parent,false));
     }
 
     @Override
@@ -36,8 +37,6 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.ViewHold
         holder.name.setText(orderModelList.get(position).getProductName());
         holder.price.setText(orderModelList.get(position).getProductPrice());
         holder.date.setText(orderModelList.get(position).getCurrentDate());
-//        Log.i("ngày tạo", cartModelList.get(position).getCurDate());
-//        Log.i("giờ tạo",cartModelList.get(position).getCurTime());
         holder.time.setText(orderModelList.get(position).getCurrentTime());
         holder.quantity.setText(orderModelList.get(position).getTotalQuantity());
         holder.totalPrice.setText(String.valueOf(orderModelList.get(position).getTotalPrice()));

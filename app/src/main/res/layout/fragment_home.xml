@@ -54,15 +54,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Xem tất cả"
-                    android:gravity="end"
-                    android:layout_marginRight="7dp"
-                    android:textSize="16sp"
-                    android:textColor="#00ff00"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -87,15 +78,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Xem tất cả"
-                    android:gravity="end"
-                    android:layout_marginRight="7dp"
-                    android:textSize="16sp"
-                    android:textColor="#00ff00"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -119,16 +101,6 @@
                     android:text="Sản phẩm đề xuất"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Xem tất cả"
-                    android:gravity="end"
-                    android:layout_marginRight="7dp"
-                    android:textSize="16sp"
-                    android:textColor="#00ff00"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

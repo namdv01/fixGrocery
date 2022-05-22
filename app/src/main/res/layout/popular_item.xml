@@ -16,7 +16,7 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:layout_width="280dp"
-            android:layout_height="100dp"
+            android:layout_height="160dp"
             android:id="@+id/popular_img"
             app:riv_corner_radius="12dp"
             android:scaleType="centerCrop"

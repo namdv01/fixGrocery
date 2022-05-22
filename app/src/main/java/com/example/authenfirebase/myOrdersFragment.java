@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.example.authenfirebase.adapters.MyCartAdapter;
 import com.example.authenfirebase.adapters.MyOrderAdapter;
 import com.example.authenfirebase.models.MyCartModel;
 import com.example.authenfirebase.models.MyOrderModel;
@@ -36,6 +37,10 @@ public class myOrdersFragment extends Fragment {
     ProgressBar progressBar;
     ConstraintLayout noOrder;
     ConstraintLayout haveOrder;
+
+    //demo
+//    List<MyCartModel> list;
+//    MyCartAdapter adapter;
 
     public myOrdersFragment() {
         // Required empty public constructor
@@ -61,6 +66,11 @@ public class myOrdersFragment extends Fragment {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        //demo
+//        list = new ArrayList<>();
+//        adapter = new MyCartAdapter(getActivity(), list);
+//        recyclerView.setAdapter(adapter);
+
         orderModelList = new ArrayList<>();
         orderAdapter = new MyOrderAdapter(getActivity(),orderModelList);
         recyclerView.setAdapter(orderAdapter);
@@ -74,9 +84,8 @@ public class myOrdersFragment extends Fragment {
                         progressBar.setVisibility(View.GONE);
                         haveOrder.setVisibility(View.GONE);
                         noOrder.setVisibility(View.VISIBLE);
-                    }
-                    else {
-                        for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()){
+                    } else {
+                        for (DocumentSnapshot documentSnapshot : task.getResult().getDocuments()) {
                             String documentId = documentSnapshot.getId();
 
                             MyOrderModel orderModel = documentSnapshot.toObject(MyOrderModel.class);
@@ -85,11 +94,17 @@ public class myOrdersFragment extends Fragment {
                             orderAdapter.notifyDataSetChanged();
                             progressBar.setVisibility(View.GONE);
                             recyclerView.setVisibility(View.VISIBLE);
+
+//                            MyCartModel myCartModel = documentSnapshot.toObject(MyCartModel.class);
+//                            myCartModel.setDocumentId(documentId);
+//                            list.add(myCartModel);
+//                            adapter.notifyDataSetChanged();
+//                            progressBar.setVisibility(View.GONE);
+//                            recyclerView.setVisibility(View.VISIBLE);
                         }
 
                     }
                 }
-
             }
         });
 

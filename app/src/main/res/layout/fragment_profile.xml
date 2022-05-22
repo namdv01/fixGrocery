@@ -37,15 +37,14 @@
         app:layout_constraintWidth_percent="0.8"/>
 
     <EditText
-        android:id="@+id/profile_email"
-        android:inputType="textEmailAddress"
+        android:id="@+id/profile_address"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_bg"
-        android:hint="Email của bạn"
+        android:hint="Địa chỉ của bạn"
         android:padding="13dp"
         android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/account"
+        android:drawableLeft="@drawable/ic_baseline_location_on_24"
         android:drawablePadding="10dp"
         android:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,24 +65,10 @@
         android:elevation="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_email"
+        app:layout_constraintTop_toBottomOf="@+id/profile_address"
         app:layout_constraintWidth_percent="0.8"/>
 
-    <EditText
-        android:id="@+id/profile_address"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_bg"
-        android:hint="Địa chỉ của bạn"
-        android:padding="13dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_baseline_location_on_24"
-        android:drawablePadding="10dp"
-        android:elevation="3dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_phone"
-        app:layout_constraintWidth_percent="0.8"/>
+
 
     <Button
         android:id="@+id/profile_btn_update"
@@ -97,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_address"
+        app:layout_constraintTop_toBottomOf="@+id/profile_phone"
         app:layout_constraintVertical_bias="0.39" />
 
 

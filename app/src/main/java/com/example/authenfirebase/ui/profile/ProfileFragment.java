@@ -3,6 +3,7 @@ package com.example.authenfirebase.ui.profile;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +26,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.auth.User;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -60,10 +64,11 @@ public class ProfileFragment extends Fragment {
 
         profileImage = root.findViewById(R.id.profile_img);
         name = root.findViewById(R.id.profile_name);
-        email = root.findViewById(R.id.profile_email);
-        phone = root.findViewById(R.id.profile_phone);
         address = root.findViewById(R.id.profile_address);
+        phone = root.findViewById(R.id.profile_phone);
         update = root.findViewById(R.id.profile_btn_update);
+
+        setValueProfile();
 
         database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
                 .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -106,6 +111,24 @@ public class ProfileFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    public void setValueProfile(){
+        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        UserModel userModel = snapshot.getValue(UserModel.class);
+                        name.setText(userModel.getName());
+//                        Glide.with(getActivity()).load(userModel.getProfileImg()).into(profileImage);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+    }
+
 
     public void updateUserProfile(){
 
